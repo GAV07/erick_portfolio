@@ -1,5 +1,5 @@
-import { GetBacon } from './utils';
 import {fadeBox, toggleHeader} from './header'
+
 
 document.addEventListener("scroll", () => {
   toggleHeader()
@@ -8,9 +8,4 @@ document.addEventListener("scroll", () => {
 
 
 
-// const baconEl = document.querySelector('.bacon');
-// GetBacon()
-//   .then(res => {
-//     const markup = res.reduce((acc, val) => (acc += `<p>${val}</p>`), '');
-//     baconEl.innerHTML = markup;
-//   }).catch(err => (baconEl.innerHTML = err));
+

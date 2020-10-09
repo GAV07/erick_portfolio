@@ -106,18 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ \"./src/scripts/utils.js\");\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_utils__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header */ \"./src/scripts/header.js\");\n\n\ndocument.addEventListener(\"scroll\", function () {\n  Object(_header__WEBPACK_IMPORTED_MODULE_1__[\"toggleHeader\"])();\n  Object(_header__WEBPACK_IMPORTED_MODULE_1__[\"fadeBox\"])();\n}); // const baconEl = document.querySelector('.bacon');\n// GetBacon()\n//   .then(res => {\n//     const markup = res.reduce((acc, val) => (acc += `<p>${val}</p>`), '');\n//     baconEl.innerHTML = markup;\n//   }).catch(err => (baconEl.innerHTML = err));\n\n//# sourceURL=webpack:///./src/scripts/main.js?");
-
-/***/ }),
-
-/***/ "./src/scripts/utils.js":
-/*!******************************!*\
-  !*** ./src/scripts/utils.js ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("// export const GetBacon = () => {\n//     const body = fetch('https://baconipsum.com/api/?type=all-meat&paras=3').then( res => res.json() );\n//     return body;\n//   };\n\n//# sourceURL=webpack:///./src/scripts/utils.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ \"./src/scripts/header.js\");\n\ndocument.addEventListener(\"scroll\", function () {\n  Object(_header__WEBPACK_IMPORTED_MODULE_0__[\"toggleHeader\"])();\n  Object(_header__WEBPACK_IMPORTED_MODULE_0__[\"fadeBox\"])();\n});\n\n//# sourceURL=webpack:///./src/scripts/main.js?");
 
 /***/ }),
 
