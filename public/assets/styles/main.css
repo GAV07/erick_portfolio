@@ -117,39 +117,60 @@ body {
 .wrapper {
   min-height: 100vh;
   display: grid;
-  color: #F7F4F3;
-  padding: 20px; }
+  color: #F7F4F3; }
   .wrapper header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100px;
+    height: 80px;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: center; }
+    text-align: center;
+    padding: 24px;
+    z-index: 1;
+    transition: background-color .25s, box-shadow .5s; }
     .wrapper header h1 {
       font-size: 3.5em; }
+    .wrapper header a {
+      color: #F7F4F3;
+      margin-left: 16px; }
+    .wrapper header a:hover {
+      color: #D3B5D2; }
+  .wrapper header.scrolled {
+    background-color: #191E27; }
   .wrapper section {
-    min-height: 100vh;
+    max-height: 100vh;
     display: grid;
-    grid-template-columns: 60px 1fr 1fr 1fr 1fr 60px;
-    grid-template-rows: 1fr 1fr 1fr; }
-  .wrapper #hero {
-    grid-template-areas: ". . . . . ." ". . . . . ." ". . . . . ."; }
-    .wrapper #hero .waves {
-      grid-area: waves; }
+    grid-template-columns: 160px 1fr 1fr 1fr 1fr 60px;
+    grid-template-rows: 1fr 1fr 1fr 1fr; }
   .wrapper a {
     text-decoration: none;
     color: #D3B5D2; }
   .wrapper p {
     color: #F7F4F3; }
-  .wrapper #gentle-wave {
-    stroke-width: .25px; }
   .wrapper footer {
     height: 50px;
     display: flex;
     justify-content: flex-end; }
+  .wrapper #hero {
+    grid-template-areas: ". . . . . ." ". desc desc desc logo logo" ". desc desc desc logo logo" ". . more more . ."; }
+    .wrapper #hero .waves {
+      position: absolute;
+      top: 30%;
+      opacity: 30%; }
+    .wrapper #hero #description {
+      grid-area: desc;
+      align-self: center;
+      justify-self: left; }
+    .wrapper #hero #gentle-wave {
+      stroke-width: .25px; }
+    .wrapper #hero #more {
+      grid-area: more;
+      align-self: center;
+      justify-self: center; }
+    .wrapper #hero #logo {
+      grid-area: logo; }
 

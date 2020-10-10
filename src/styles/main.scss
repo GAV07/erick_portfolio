@@ -14,42 +14,89 @@ body {
   min-height: 100vh;
   display: grid;
   color: $offwhite;
-  padding: 20px;
+  
 
   header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100px;
+    height: 80px;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-  h1 {
-      font-size: 3.5em;
+    padding: 24px;
+    z-index: 1;
+    transition:  background-color .25s, box-shadow .5s;
+
+    h1 {
+        font-size: 3.5em;
+      }
+    a {
+      color: $offwhite;
+      margin-left: 16px;
     }
+    a:hover {
+      color: $offpink;
+    }
+    
+
   }
+  header.scrolled { background-color: $background;}
   
 
   section {
-    min-height: 100vh;
+    max-height: 100vh;
     display: grid;
-    grid-template-columns: 60px 1fr 1fr 1fr 1fr 60px;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 160px 1fr 1fr 1fr 1fr 60px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     
+  }
+
+  a {
+    text-decoration: none;
+    color: $offpink;
+  }
+
+  p {
+    color: $offwhite;
+  }
+
+  
+  
+
+  footer {
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
   }
 
   #hero {
     grid-template-areas:
       ". . . . . ."
-      ". . . . . ."
-      ". . . . . .";
+      ". desc desc desc logo logo"
+      ". desc desc desc logo logo"
+      ". . more more . .";
 
     .waves {
-      grid-area: waves;
+      position: absolute;
+      top: 30%;
+      opacity: 30%;
     }
+    #description { 
+      grid-area: desc;
+      align-self: center;
+      justify-self: left;
+    }
+    #gentle-wave { stroke-width: .25px;}
+    #more {
+      grid-area: more;
+      align-self: center;
+      justify-self: center;
+    }
+    #logo {grid-area: logo;}
     
   }
   #work {
@@ -62,24 +109,6 @@ body {
 
   }
 
-  a {
-    text-decoration: none;
-    color: $offpink;
-  }
 
-  p {
-    color: $offwhite;
-  }
-
-  #gentle-wave {
-    stroke-width: .25px;
-  }
-  
-
-  footer {
-    height: 50px;
-    display: flex;
-    justify-content: flex-end;
-  }
 }
 
